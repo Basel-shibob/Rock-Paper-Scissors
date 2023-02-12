@@ -36,3 +36,10 @@ button {
     text-align: center;
     margin-top: 20px;
 }
+.copyright{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    font-size: x-large;
+}
