@@ -55,13 +55,17 @@ function showResult(score, playerChoice, computerChoice) {
     const resultDev = document.getElementById('result')
     const handstDev = document.getElementById('hands')
     const playerScoreDev = document.getElementById('player-score')
-    
+    const wrapper = document.getElementsByClassName('wrapper')
+    console.log(wrapper)
     if (score == -1) {
         resultDev.innerText = 'You lose!'
+        wrapper[0].style.background = 'red'
     } else if (score == 0) {
         resultDev.innerText = "It's a tie!"
+        wrapper[0].style.background = 'darkcyan'
     } else {
         resultDev.innerText = 'You won!'
+        wrapper[0].style.background = 'green'
     }
 
     handstDev.innerText = `🧔🏻‍♂️ ${playerChoice} vs 🤖 ${computerChoice}`
@@ -77,6 +81,7 @@ function onClickRPS(playerChoice) {
     totalScore['playerScore'] += score
     console.log({score})
     console.log(totalScore)
+    console.log("===================");
     showResult(score, playerChoice, computerChoice)
 }
 
